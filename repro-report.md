@@ -13,15 +13,16 @@
 4. Run the test with --runxfail flag: `python -m pytest tests/unit/test_readme_parser.py::TestReadmeParser::test_extract_heading_hierarchy -v --runxfail`
 
 ### Result
-The test shows XFAIL status — it fails because the test fixture's 8-space indentation is parsed as a Markdown code block instead of regular content.
+The test fails outright under --runxfail
 
 ### Behavior Shown
-
+```
 assert len(headings) > 0
 E assert 0 > 0
 E + where 0 = len([])
 
 tests/unit/test_readme_parser.py:156: AssertionError
+```
 
 The parser returns an empty list because the markdown's 8-space indentation is parsed as a code block.
 
