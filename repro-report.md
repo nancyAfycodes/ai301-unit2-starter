@@ -10,7 +10,7 @@
 1. Clone the fork of pathreview-ai301-fa26-s3
 2. Create and activate virtual environment: `python -m venv venv && source venv/Scripts/activate`
 3. Install dependencies: `pip install -e .`
-4. Run the test with --runxfail: `python -m pytest tests/unit/test_readme_parser.py::TestReadmeParser::test_extract_heading_hierarchy -v --runxfail`
+4. Run the test with --runxfail flag: `python -m pytest tests/unit/test_readme_parser.py::TestReadmeParser::test_extract_heading_hierarchy -v --runxfail`
 
 ### Result
 The test shows XFAIL status — it fails because the test fixture's 8-space indentation is parsed as a Markdown code block instead of regular content.
