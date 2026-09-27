@@ -39,10 +39,13 @@ marker (manifest H-04).
 - Run 3: 15/20 (consistent with encoding fix)
 
 **Issue analysis:**
-[Pick one disagreement from your 15/20 run and explain it]
+
+pkg-16 (wrong-target): My rubric decided accepted it, even though the gold label was to reject. Reason being that the package showed a concrete error in the output section ("Behavior shown" check passed). However, the error was unrelated to the fixture indentation issue. The rubric's "Behavior matches issue" check was too loose; it only required "a concrete error," not the specific indentation-caused error that issue #71 illustrates.
 
 **Check rationale:**
-[Quote one check from your rubric and explain why you wrote it that way]
+
+"Behavior shown — Output shows the indent-as-code-block parsing problem: a fixture with eight-space indentation is parsed as a code block, causing the heading hierarchy test to fail". Therefore, I wrote this check to be very specific to issue #71 because distinguishing between "any error in output", and "the specific 8-space indent error" is important in reproducing the issue as well as its related fix.
 
 **Trade-offs:**
-[What your rubric gives up, what you'd change with more time]
+
+The specificity of "Behavior shown" means some legitimate reproductions that show related but slightly different indent-parsing errors may be rejected. For instance, a report showing 8-space indent breaking a different parser (not heading extraction) would fail. Therefore, I'd like to add a secondary check: "Indent-related parsing failure" (preferred weight) to  account for variations without having to reject the issue.
