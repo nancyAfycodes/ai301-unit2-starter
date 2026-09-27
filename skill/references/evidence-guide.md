@@ -1,53 +1,43 @@
 # Evidence guide: where proof lives in a reproduction package
 
-<!--
-THIS IS THE PART YOU WRITE (new this week: Unit 1 handed you this file
-finished; the scaffolding fades). The skill uses this guide as its map:
-for every kind of proof a rubric check names, this file says WHERE to
-find it in a package and WHAT GOOD LOOKS LIKE when you do.
-
-Under each family heading below, write:
-
-- Where it lives: the exact places to look. In an eval bundle (which
-  section of the package: the issue context, the repo-facts block, the
-  claim comment, the repro report and its parts). In live mode (where
-  on GitHub or in the draft: the issue thread, the repo's docs, the
-  student's draft comment).
-- What good looks like: one or two sentences someone else could apply.
-  Prefer observable conditions ("the versions named match what the
-  issue targets, or the difference is called out") over adjectives
-  ("environment is thorough").
-
-A rubric check whose evidence this guide cannot locate is a check
-nobody else can execute; the rubric swap showed you what that feels
-like. Write the map you wish your grader had.
--->
-
 ## Environment
 
-<!-- Where the environment record lives, and what a sufficient one
-looks like against the issue's stated target. -->
+Where it lives: The repro report's "Environment" or "Setup" section, listing Python version, 
+test framework version, and which files are involved in the test.
+
+What good looks like: The report names the exact Python version used, the test framework 
+(pytest, unittest, etc.), and identifies the test file path. For issue #71, it should 
+mention the fixture file and the test that reads it.
 
 ## Steps
 
-<!-- Where the reproduction steps live, and what makes them followable
-by a stranger, starting state to trigger. -->
+Where it lives: The repro report's "Reproduction Steps" section, numbered and sequential.
+
+What good looks like: A stranger can follow the steps without reading the issue description. 
+Each step is a concrete action: "clone the repo", "install dependencies", "run pytest tests/test_fixture.py", 
+with the exact command shown. For #71, steps should show how to navigate to the fixture file 
+and run the specific test that fails.
 
 ## Behavior shown
 
-<!-- Where the artifacts live (output excerpts, logs, screenshots),
-and what it means for an artifact to show the issue's behavior rather
-than an adjacent one. -->
+Where it lives: The repro report's "Output" or "Error" section, with command output or error messages pasted verbatim.
+
+What good looks like: The artifact (error message, test output) directly shows the issue named in #71 
+— that an eight-space indent is being parsed as a code block instead of test content. 
+It's not a different error; it's this specific defect.
 
 ## Honesty
 
-<!-- Where claims and their backing meet: how to tell a report that
-says exactly what happened (including an honest cannot-reproduce) from
-one that claims more than its evidence shows. -->
+Where it lives: The repro report's "Result" or "Conclusion" section, and the claim comment's promise.
+
+What good looks like: The report states clearly: "I reproduced this issue" with evidence, 
+or "I could not reproduce it, here's what I found instead." The claim comment promises work 
+without claiming success beforehand. No speculation presented as fact.
 
 ## Comms
 
-<!-- Where the words meet the repo: the claim comment against the
-issue, the comments against the repo's stated templates and
-contribution policy (including AI-use disclosure requirements), and
-what specific-and-honest looks like next to boilerplate. -->
+Where it lives: The claim comment and repro report text, checked against the Path Review repo's contribution style.
+
+What good looks like: Language is specific and plain. Code blocks are used for output, 
+numbered lists for steps. The tone matches the repo (professional, clear, no excessive emoji or casual language). 
+The claim comment names the issue and what you'll do next; the repro report shows what you found.
