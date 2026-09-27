@@ -4,7 +4,7 @@
 
 | Environment recorded | Repro report's setup section | Environment details are present (Python version OR test framework OR system info) | required |
 | Steps are complete | Repro report's steps section | Steps are provided and describe how to trigger the issue | required |
-| Behavior matches issue | Repro report's output section | Output demonstrates the specific defect described in the issue (not an adjacent error) | required |
+| Behavior matches issue | Repro report's output section | Output demonstrates the indent-as-code-block parsing problem: a fixture with eight-space indentation is parsed as a code block, causing the heading hierarchy test to fail | required |
 
 ## Verdict rule
 
