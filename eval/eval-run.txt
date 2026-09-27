@@ -1,54 +1,54 @@
-# eval run written by run_eval.py at 2026-09-27T17:02:55Z
+# eval run written by run_eval.py at 2026-09-27T18:26:05Z
 # model: sonnet (pinned)
 # graded: C:\Users\chidi\.claude\skills\repro-check
 # packages: 20 scored
-#   rubric.md  sha256:99aab6c1b913e673
+#   rubric.md  sha256:7c2eddac8e04be7a
 #   evidence-guide.md  sha256:847056f8724c792a
 #   SKILL.md  sha256:f1b0abceef33d418
 #
 grading 20 package(s) with rubric.md + evidence-guide.md, model sonnet, 5 worker(s)...
+  pkg-05: accept
+  pkg-03: accept
   pkg-04: reject
   pkg-02: reject
-  pkg-03: reject
-  pkg-06: reject
+  pkg-07: accept
   pkg-01: reject
-  pkg-05: reject
-  pkg-07: reject
-  pkg-11: reject
+  pkg-06: reject
   pkg-10: reject
   pkg-08: reject
   pkg-09: reject
+  pkg-12: accept
   pkg-13: reject
+  pkg-11: reject
   pkg-15: reject
-  pkg-12: reject
   pkg-14: reject
-  pkg-17: reject
+  pkg-19: accept
+  pkg-16: accept
   pkg-18: reject
+  pkg-17: reject
   pkg-20: reject
-  pkg-16: reject
-  pkg-19: reject
 
 item    gold    verdict  agree  note
-pkg-01  accept  reject   NO     failed: Environment recorded, Behavior matches issue, Repo conventions respected
+pkg-01  accept  reject   NO     failed: Repo is active
 pkg-02  reject  reject   yes    
-pkg-03  accept  reject   NO     failed: Environment recorded, Steps are complete, Behavior matches issue
+pkg-03  accept  accept   yes    
 pkg-04  reject  reject   yes    
-pkg-05  accept  reject   NO     failed: Environment recorded, Steps are complete, Behavior matches issue
+pkg-05  accept  accept   yes    
 pkg-06  reject  reject   yes    
-pkg-07  accept  reject   NO     failed: Environment recorded, Behavior matches issue, Repo conventions respected
+pkg-07  accept  accept   yes    
 pkg-08  reject  reject   yes    
-pkg-09  accept  reject   NO     failed: Environment recorded, Behavior matches issue
-pkg-10  accept  reject   NO     failed: Environment recorded, Behavior matches issue
-pkg-11  accept  reject   NO     failed: Environment recorded, Behavior matches issue
-pkg-12  accept  reject   NO     failed: Environment recorded, Steps are complete, Behavior matches issue, Repo conventions respected
+pkg-09  accept  reject   NO     failed: Repo is active, Behavior shown
+pkg-10  accept  reject   NO     failed: Behavior shown, Not wrong-target issue
+pkg-11  accept  reject   NO     failed: Repo is active
+pkg-12  accept  accept   yes    
 pkg-13  reject  reject   yes    
 pkg-14  reject  reject   yes    
 pkg-15  reject  reject   yes    
-pkg-16  reject  reject   yes    
+pkg-16  reject  accept   NO     graded accept
 pkg-17  reject  reject   yes    
 pkg-18  reject  reject   yes    
-pkg-19  reject  reject   yes    
+pkg-19  reject  accept   NO     graded accept
 pkg-20  reject  reject   yes    
 
-categories: clear-accept 0/8  disclosure 1/1  no-evidence 4/4  unfollowable-comms 3/3  wrong-target 4/4
-agreement: 12/20 scored items  (bar: 18/20: below the bar; category floor unmet: no match in clear-accept)
+categories: clear-accept 4/8  disclosure 1/1  no-evidence 4/4  unfollowable-comms 2/3  wrong-target 3/4
+agreement: 14/20 scored items  (bar: 18/20: below the bar)
