@@ -1,4 +1,3 @@
-**Update reproduction**
 I'm claiming this issue and have already reproduced the bug.
 
 **Issue:** Issue #71 — The heading hierarchy test fixture has an 8-space indentation 
