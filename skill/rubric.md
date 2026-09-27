@@ -2,13 +2,9 @@
 
 ## Checks
 
-| Check | Evidence | Pass condition | Weight |
-|---|---|---|---|
-| Environment recorded | Repro report's environment section | Lists Python version, test framework, and file paths affected | required |
-| Steps are complete | Repro report's reproduction steps | Steps are numbered and detailed enough to follow without the issue description | required |
-| Behavior matches issue | Repro report's output/error section | Shows the indent-as-code-block parsing defect described in issue #71 | required |
-| Outcome stated clearly | Repro report's conclusion | Explicitly states whether bug was reproduced and what was verified | required |
-| Repo conventions respected | Claim comment and repro report text | Follows Path Review's comment style (no excessive formatting, clear structure) | preferred |
+| Environment recorded | Repro report's setup section | Environment details are present (Python version OR test framework OR system info) | required |
+| Steps are complete | Repro report's steps section | Steps are provided and describe how to trigger the issue | required |
+| Behavior matches issue | Repro report's output section | Output shows the indent-as-code-block issue or related behavior | required |
 
 ## Verdict rule
 
